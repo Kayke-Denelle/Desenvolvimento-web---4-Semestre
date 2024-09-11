@@ -1,0 +1,10 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <input name="first" ngModel required><br>
+    <input name="last" ngModel><br>
+    <button>Submit</button>
+  </form>
+  
+  
+  <br><br>
+  <p>Form value: {{ myForm.value.first}}</p>
+  <p>Form valid: {{ myForm.valid }}</p>
