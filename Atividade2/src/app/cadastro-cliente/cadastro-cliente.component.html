@@ -1,0 +1,27 @@
+<div>
+    <h2>Cadastro de Cliente</h2>
+    <form (ngSubmit)="cadastrarCliente()" #clienteForm="ngForm">
+  
+      <label for="id">ID:</label>
+      <input type="number" [(ngModel)]="cliente.id" name="id" required>
+      
+      <label for="nome">Nome:</label>
+      <input type="text" [(ngModel)]="cliente.nome" name="nome" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" [(ngModel)]="cliente.email" name="email" required>
+  
+      <label for="idade">Idade:</label>
+      <input type="number" [(ngModel)]="cliente.idade" name="idade" required>
+  
+      <button type="submit" [disabled]="!clienteForm.form.valid">Cadastrar</button>
+    </form>
+  
+    <h3>Clientes Cadastrados</h3>
+    <ul>
+      <li *ngFor="let cliente of clientes">
+        {{ cliente.nome }}
+      </li>
+    </ul>
+  </div>
+  

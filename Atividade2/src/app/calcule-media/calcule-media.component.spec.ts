@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenuComponent } from './menu.component';
+import { CalculeMediaComponent } from './calcule-media.component';
 
-describe('MenuComponent', () => {
-  let component: MenuComponent;
-  let fixture: ComponentFixture<MenuComponent>;
+describe('CalculeMediaComponent', () => {
+  let component: CalculeMediaComponent;
+  let fixture: ComponentFixture<CalculeMediaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MenuComponent]
+      declarations: [CalculeMediaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MenuComponent);
+    fixture = TestBed.createComponent(CalculeMediaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

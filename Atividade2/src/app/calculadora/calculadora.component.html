@@ -1,0 +1,22 @@
+<div>
+    <label for="N1">Número 1:</label>
+    <input type="text" [(ngModel)]="N1">
+  
+    <label for="N2">Número 2:</label>
+    <input type="text" [(ngModel)]="N2">
+  
+    <label for="operacao">Operação:</label>
+    <select [(ngModel)]="operacao">
+      <option value="soma">+</option>
+      <option value="subtracao">-</option>
+      <option value="multiplicacao">x</option>
+      <option value="divisao">/</option>
+    </select>
+  
+    <button (click)="calcular()">Calcular</button>
+  
+    <label for="resultado">Resultado:</label>
+    <input type="text" [value]="resultado">
+  </div>
+  
+
