@@ -1,0 +1,3 @@
+<ol>
+    <li *ngFor="let tarefa of tarefas" [ngStyle]="{'text-decoration': tarefa.concluida ? 'none' : 'line-through'}">{{tarefa.descricao}} <button class="btn" [ngClass]="{'btn-primary': tarefa.concluida, 'btn-secondary':!tarefa.concluida}" (click)="concluir(tarefa)">{{tarefa.concluida?'concluir':'ativar'}}</button></li>
+</ol>

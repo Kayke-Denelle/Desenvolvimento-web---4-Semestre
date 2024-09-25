@@ -1,0 +1,44 @@
+<h1>ngIf</h1>
+<div *ngIf="exibir; else outroConteudo">
+    <h1>conteúdo se for verdadeiro</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nemo tempora numquam at eius doloremque repellat id? Dolorem dignissimos repellendus neque, tempora explicabo dolore fuga quas quis et amet necessitatibus? Ea error ratione ipsum ex quae deleniti velit, soluta dolorum tempora quod numquam nemo distinctio rem consequuntur quo aliquam quisquam!</p>
+</div>
+
+<ng-template #outroConteudo>
+    <h1 style="color: red;">Conteudo se for Falso</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, inventore?</p>
+</ng-template>
+
+<hr>
+
+<h1>ngFor</h1>
+
+<ul>
+    <li *ngFor="let nome of nomes; index as i">{{i}}) {{nome}} </li>
+</ul>
+
+<hr>
+
+<h1>ngSwitch</h1>
+<elemento [ngSwitch]="tipoAutomovel">
+    <div *ngSwitchCase="'moto'">Foi selecionado MOTO</div>
+    <div *ngSwitchCase="'carro'">Agora CARRO</div>
+    <div *ngSwitchDefault>conteúdo padrão</div>
+</elemento>
+
+<hr>
+
+<h1>ngStyle</h1>
+<div [ngStyle]="{'color': cor}">
+    <h1>Vai ser vermelho</h1>
+</div>
+
+
+
+<hr>
+
+<h1>ngClasss</h1>
+<div [ngClass]="{'ativo': isActive, 'desativado': !isActive}">
+    <h1>testando</h1>
+</div>
+  
