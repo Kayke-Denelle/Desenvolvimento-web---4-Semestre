@@ -1,0 +1,45 @@
+
+<div class="container">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+    <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" class="form-control" ngModel required
+    [ngClass]="{'is-invalid': !nome.valid && myForm.submitted}" #nome="ngModel">
+    </div>
+    <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" class="form-control" ngModel required email
+    [ngClass]="{'is-invalid': !email.valid && myForm.submitted}" #email="ngModel">
+    </div>
+    <button type="submit" class="btn btn-primary">
+    Submit
+    </button>
+    </form>
+    <!-- Exibição de mensagem de validação -->
+    <div *ngIf="myForm.submitted && myForm.invalid" class="alert alert-danger">
+    O formulário é inválido. Por favor, corrija os campos destacados.
+    </div>
+    <!-- Exibição de valores do formulário -->
+    <div *ngIf="myForm.submitted && myForm.valid" class="alert alert-success">
+    Valores do formulário: {{ myForm.value | json }}
+    </div>
+    </div>
+
+    <!--
+<div class="container w-50">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" class="form-control" ngModel required email>
+    <div *ngIf="myForm.submitted && myForm.controls['email'].errors" class="alert alert-danger"
+    role="alert">
+    <div *ngIf="myForm.controls['email'].errors['required']">Email é obrigatório</div>
+    <div *ngIf="myForm.controls['email'].errors['email']">E-mail é inválido</div>
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary">
+    Submit
+    </button>
+    </form>
+</div>
+-->
