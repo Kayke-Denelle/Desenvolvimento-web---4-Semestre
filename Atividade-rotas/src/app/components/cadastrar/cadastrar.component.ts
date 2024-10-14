@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './cadastrar.component.css'
 })
 export class CadastrarComponent {
+  usuario = { nome: '', senha: '', confirmacaoSenha: '' };
+  mensagemSucesso = '';
 
+  onSubmit() {
+    this.mensagemSucesso = `Usuário cadastrado com sucesso!`;
+  }
 }

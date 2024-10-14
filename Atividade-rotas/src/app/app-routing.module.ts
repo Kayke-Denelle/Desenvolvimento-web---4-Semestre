@@ -6,7 +6,6 @@ import { CadastrarComponent } from './components/cadastrar/cadastrar.component';
 import { PageNotfoundComponent } from './components/page-notfound/page-notfound.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
   {path: 'home/:nome', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'cadastrar', component: CadastrarComponent},
